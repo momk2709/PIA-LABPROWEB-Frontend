@@ -1,0 +1,32 @@
+.c-item{
+height: 480px;
+}
+
+.c-img{
+height:100% ;
+object-fit: cover; 
+}
+
+.sec-p{
+    height: 300px;
+}
+
+.verde-c{
+    background-color: #9AA653;
+}
+
+.azul-c{
+    background-color: #2D7E90;
+}
+
+footer {
+    background-color: black;
+    color: gray;
+    font-size: 12px;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.art-3{
+    height: 300px;
+}
