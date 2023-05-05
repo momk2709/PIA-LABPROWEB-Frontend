@@ -1,0 +1,17 @@
+footer {
+    background-color: black;
+    color: gray;
+    font-size: 12px;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.txt-just{
+    margin: 15px 150px;
+
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+}
