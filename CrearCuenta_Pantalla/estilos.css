@@ -1,0 +1,23 @@
+body {
+    background-color: #e9ecef;
+  }
+  .register-form {
+    margin-top: 100px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #061f39f9;
+    padding: 20px;
+    border-radius: 5px;
+    color: #fefcfc;
+  }
+  .register-form label {
+    font-weight: bold;
+  }
+  .register-form input {
+    margin-bottom: 20px;
+  }
+  .register-form button {
+    background-color: #1c09cb;
+    color: #fff;
+  }
