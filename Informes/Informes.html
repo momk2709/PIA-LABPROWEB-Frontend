@@ -15,6 +15,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -46,64 +47,70 @@
                 </div>
             </div>
         </nav>
-        <div class="container mt-5">
-            <div class="row">
-              <div class="col-md-6 offset-md-3">
-                <h2>Informes</h2>
-                <form action="#" method="post">
+          <h2>Informes</h2>
+          <div class="formulario">
+          <form>
+              <fieldset>
+                  <legend>Ponte en contacto con nosotros, compartenos tus datos!</legend>
                   <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="phone">Teléfono:</label>
-                    <input type="tel" class="form-control" id="phone" name="phone">
+                      <label for="name">Nombre:</label>
+                      <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" required>
                   </div>
                   <div class="form-group">
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                      <label for="phone">Teléfono:</label>
+                      <input type="tel" class="form-control" id="phone" placeholder="Ingresa tu número de teléfono" required>
                   </div>
                   <div class="form-group">
-                    <label for="state">Estado:</label>
-                    <select class="form-control" id="state" name="state">
-                      <option value="">Seleccione un estado</option>
-                      <option value="Aguascalientes">Aguascalientes</option>
-                      <option value="Baja California">Baja California</option>
-                      <option value="Baja California Sur">Baja California Sur</option>
-                      <option value="Campeche">Campeche</option>
-                      <option value="Chiapas">Chiapas</option>
-                      <option value="Chihuahua">Chihuahua</option>
-                      <option value="Coahuila">Coahuila</option>
-                      <option value="Colima">Colima</option>
-                      <option value="Distrito Federal">Distrito Federal</option>
-                      <option value="Durango">Durango</option>
-                      <option value="Estado de México">Estado de México</option>
-                      <option value="Guanajuato">Guanajuato</option>
-                      <option value="Guerrero">Guerrero</option>
-                      <option value="Hidalgo">Hidalgo</option>
-                      <option value="Jalisco">Jalisco</option>
-                      <option value="Michoacán">Michoacán</option>
-                      <option value="Morelos">Morelos</option>
-                      <option value="Nayarit">Nayarit</option>
-                      <option value="Nuevo León">Nuevo León</option>
-                      <option value="Oaxaca">Oaxaca</option>
-                      <option value="Puebla">Puebla</option>
-                      <option value="Querétaro">Querétaro</option>
-                      <option value="Quintana Roo">Quintana Roo</option>
-                      <option value="San Luis Potosí">San Luis Potosí</option>
-                      <option value="Sinaloa">Sinaloa</option>
-                      <option value="Sonora">Sonora</option>
-                      <option value="Tabasco">Tabasco</option>
-                      <option value="Tamaulipas">Tamaulipas</option>
-                      <option value="Tlaxcala">Tlaxcala</option>
-                      <option value="Veracruz">Veracruz</option>
-                      <option value="Yucatán">Yucatán</option>
-                      <option value="Zacatecas">Zacatecas</option>
-                    </select>
+                      <label for="email">Correo electrónico:</label>
+                      <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
                   </div>
-                  <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  <div class="form-group">
+                      <label for="state">Estado:</label>
+                      <select class="form-control" id="state">
+                          <option>Selecciona un estado</option>
+                          <option>Aguascalientes</option>
+                          <option>Baja California</option>
+                          <option>Baja California Sur</option>
+                          <option>Campeche</option>
+                          <option>Chiapas</option>
+                          <option>Chihuahua</option>
+                          <option>Coahuila</option>
+                          <option>Colima</option>
+                          <option>Durango</option>
+                          <option>Estado de México</option>
+                          <option>Guanajuato</option>
+                          <option>Guerrero</option>
+                          <option>Hidalgo</option>
+                          <option>Jalisco</option>
+                          <option>Michoacán</option>
+                          <option>Morelos</option>
+                          <option>Nayarit</option>
+                          <option>Nuevo León</option>
+                          <option>Oaxaca</option>
+                          <option>Puebla</option>
+                          <option>Querétaro</option>
+                          <option>Quintana Roo</option>
+                          <option>San Luis Potosí</option>
+                          <option>Sinaloa</option>
+                          <option>Sonora</option>
+                          <option>Tabasco</option>
+                          <option>Tamaulipas</option>
+                          <option>Tlaxcala</option>
+                          <option>Veracruz</option>
+                          <option>Yucatán</option>
+                          <option>Zacatecas</option>
+                      </select>
                   </div>
-                </body>
-                </html>
-          
+                  <div class="form-group">
+                      <label for="message">Mensaje:</label>
+                      <textarea class="form-control" id="message" rows="3" placeholder="Escribe tu mensaje aquí"></textarea>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>                    
+                </fieldset>
+            </form>
+        </div>
+        
+
+                 
