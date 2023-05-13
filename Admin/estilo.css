@@ -1,0 +1,28 @@
+.principal {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#izquierda {
+    background-color: #042955;
+    float: left;
+    width: 300px;
+    display: block;
+}
+
+#derecha {
+    float: right;
+    width: 700px;
+    height: 606px;
+    position: relative;
+}
+
+.list{
+    padding: 0;
+    list-style: none;
+}
+
+li{
+    font-size: 30px;
+    padding: 20px;
+}
