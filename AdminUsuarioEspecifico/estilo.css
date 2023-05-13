@@ -8,7 +8,6 @@
     float: left;
     width: 300px;
     display: block;
-    height: 1070px;
 }
 
 #derecha {
@@ -27,32 +26,40 @@ li {
     padding: 20px;
 }
 
-#content{
+#content {
     position: absolute;
     width: 600px;
     left: 50px;
+    top: 20px;
 }
 
-#lstCursos li{
-    font-size: 15px;
-}
-
-
-.tblCur{
-    height: 150px;
-}
-
-.tblCur option{
-   font-size: 24;
-}
-
-.form-group{
-    margin-bottom: 10px;
-}
-
-.fondoTitulo{
+.fondoTitulo {
     background-color: #042955;
     width: 600px;
     height: 30px;
     border-radius: 3px;
+}
+
+.cont-left{
+    float: left;
+    width: 150px;
+}
+
+.cont-right {
+    float: right;
+    width: 450px;
+}
+
+.name{
+    float: left;
+}
+.email{
+    float: right;
+    margin-top: 110px;
+}
+
+.usuarioCursos li{
+    font-size: 20px;
+    padding: 10px;
+    list-style: none;
 }
