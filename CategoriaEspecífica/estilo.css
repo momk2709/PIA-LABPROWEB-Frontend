@@ -1,0 +1,70 @@
+p {
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+    color: black;
+}
+
+h5{
+    font-family: 'Lato', sans-serif;
+    color: black;
+}
+
+.c-item {
+    height: 480px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: black;
+    color: gray;
+    font-size: 12px;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+#cursoLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 70%;
+}
+
+.card-body{
+    background-color: rgb(164, 162, 194);
+}
+
+#txt-abajo{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+#lstCursos
+a:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(30, 45, 87);
+    height: 4px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+#lstCursos
+a:hover:after {
+    width: 100%;
+}

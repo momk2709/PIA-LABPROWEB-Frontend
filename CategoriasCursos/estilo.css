@@ -52,17 +52,19 @@ a:active {
     text-decoration: none;
 }
 
+#lstCategorias
 a:after {
     content: "";
     position: absolute;
     background-color: rgb(67, 111, 234);
     height: 4px;
     width: 0;
-    left: 16%;
+    left: 14%;
     bottom: -5px;
     transition: 0.3s;
 }
 
+#lstCategorias
 a:hover:after {
     width: 70%;
 }
