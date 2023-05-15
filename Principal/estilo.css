@@ -34,3 +34,29 @@ footer {
 .art-3{
     height: 300px;
 }
+#justificado {
+    text-align: justify;
+  }
+
+.text-center{
+  text-align: center;
+}  
+
+.icono-space{
+  display: flex;
+}
+
+.icono-margin{
+  margin-right: 15px;
+}
+
+
+.center-content{
+  display: flex;
+  justify-content: center;
+}
+
+.smaller-image {
+  height: 125px;
+  width: 125px;
+}
