@@ -1,0 +1,17 @@
+body {
+    background-color: #ffffff;
+  }
+  .title {
+    background-color: #001f3f;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .invoice-section {
+    margin-bottom: 30px;
+  }
+.form-label {
+  font-weight: bold;
+}
