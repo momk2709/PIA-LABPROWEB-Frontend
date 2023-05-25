@@ -85,7 +85,7 @@
       </nav>
       <h2>Informes</h2>
       <div class="formulario">
-        <form>
+        <form id="form-informe">
           <fieldset>
             <legend>
               Ponte en contacto con nosotros, compartenos tus datos!
@@ -121,48 +121,12 @@
               />
             </div>
             <div class="form-group">
-              <label for="state">Estado:</label>
-              <select class="form-control" id="state">
-                <option>Selecciona un estado</option>
-                <option>Aguascalientes</option>
-                <option>Baja California</option>
-                <option>Baja California Sur</option>
-                <option>Campeche</option>
-                <option>Chiapas</option>
-                <option>Chihuahua</option>
-                <option>Coahuila</option>
-                <option>Colima</option>
-                <option>Durango</option>
-                <option>Estado de México</option>
-                <option>Guanajuato</option>
-                <option>Guerrero</option>
-                <option>Hidalgo</option>
-                <option>Jalisco</option>
-                <option>Michoacán</option>
-                <option>Morelos</option>
-                <option>Nayarit</option>
-                <option>Nuevo León</option>
-                <option>Oaxaca</option>
-                <option>Puebla</option>
-                <option>Querétaro</option>
-                <option>Quintana Roo</option>
-                <option>San Luis Potosí</option>
-                <option>Sinaloa</option>
-                <option>Sonora</option>
-                <option>Tabasco</option>
-                <option>Tamaulipas</option>
-                <option>Tlaxcala</option>
-                <option>Veracruz</option>
-                <option>Yucatán</option>
-                <option>Zacatecas</option>
-              </select>
-            </div>
-            <div class="form-group">
               <label for="message">Mensaje:</label>
               <textarea
                 class="form-control"
                 id="message"
                 rows="3"
+                maxlength="250"
                 placeholder="Escribe tu mensaje aquí"
               ></textarea>
             </div>
@@ -183,9 +147,13 @@
                 </div>
               </div>
             </div>
+            <div id="error-container" class="text-danger text-center"></div>
           </footer>
         </form>
       </div>
     </div>
+
+
+    <script type="module" src="./js/informe.js"></script>
   </body>
 </html>
