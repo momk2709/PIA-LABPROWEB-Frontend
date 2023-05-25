@@ -21,8 +21,9 @@ registerForm.addEventListener("submit", async (e) => {
       passwordConfirmation,
     });
 
-    console.log(response);
     alert("Usuario registrado correctamente");
+
+    window.location.href = "../../LoginUsuario/Login.html"
   } catch (error) {
     if (error.name === "ValidationError") {
       const errorMessages = error.data.map((error) => {
