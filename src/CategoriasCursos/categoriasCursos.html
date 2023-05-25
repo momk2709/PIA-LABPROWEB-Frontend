@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestros Cursos</title>
+    <link rel="stylesheet" href="estilo.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand mx-5" href="../index.html">
+            <img src="img/sif2.png" alt="" width="70" height="70" />
+          </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 fs-3 p-1">
+              <li class="nav-item mx-4">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../AboutUs/AboutUs.html"
+                  >Quiénes Somos</a
+                >
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link active" href="categoriasCursos.html"
+                  >Cursos</a
+                >
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="../Informes/Informes.html"
+                  >Informes</a
+                >
+              </li>
+            </ul>
+            <div class="input-group mx-5 w-25">
+              <input
+                type="search"
+                class="form-control rounded-pill"
+                placeholder="Buscar"
+                aria-label="Search"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-light rounded-pill"
+                type="button"
+                id="button-addon2"
+              >
+                <img src="img/lup.png" width="20" height="20" alt="" />
+              </button>
+            </div>
+            <a
+              class="btn btn-primary"
+              href="../LoginUsuario/Login.html"
+              role="button"
+              >Iniciar Sesión</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <div class="row position-relative mb-5">
+        <div class="col c-item">
+          <img
+            src="img/p1.png"
+            class="d-block w-100 c-img position-absolute"
+            alt="..."
+          />
+          <div
+            class="position-absolute position-absolute top-50 start-50 translate-middle text-white"
+          >
+            <h1 class="mt-5 display-1 fw-bolder text-center">
+              Nuestros Cursos
+            </h1>
+            <p class="fs-5 mt-5 text-center">
+              Ofrecemos una amplia oferta educativa en las siguientes áreas de
+              conocimiento
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="lstCategorias" class="row m-5">
+        <div class="col-lg-4 col-12 position-relative mb-5">
+          <a href="../CategoriaEspecífica/desarrollopersonal.html">
+            <div class="card">
+              <div class="card-body">
+                <div id="curso" class="card-title text-white text-center p-4">
+                  <h5>Desarrollo Personal</h5>
+                </div>
+                <div
+                  id="descripcionCurso"
+                  class="card-text text-white text-center p-3"
+                >
+                  <p>
+                    Programa de aprendizaje diseñado para ayudar a las personas
+                    a crecer, mejorar y maximizar su potencial en diferentes
+                    áreas de sus vidas. Estos cursos se enfocan en el
+                    crecimiento personal, la automejora y el desarrollo de
+                    habilidades clave que contribuyen al bienestar y al éxito en
+                    la vida personal y profesional.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-12 position-relative mb-5">
+          <a href="../CategoriaEspecífica/AdminConta.html">
+            <div class="card">
+              <div class="card-body">
+                <div id="curso" class="card-title text-white text-center p-4">
+                  <h5>Administración, contabilidad y finanzas</h5>
+                </div>
+                <div
+                  id="descripcionCurso"
+                  class="card-text text-white text-center p-3"
+                >
+                  <p>
+                    Los participantes aprenden sobre los principios y prácticas
+                    de gestión empresarial, incluyendo la planificación
+                    estratégica, la organización de recursos, el liderazgo, la
+                    toma de decisiones, la gestión del cambio y la resolución de
+                    problemas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-12 position-relative mb-5">
+          <a href="../CategoriaEspecífica/Calidad.html">
+            <div class="card">
+              <div class="card-body">
+                <div id="curso" class="card-title text-white text-center p-4">
+                  <h5>Calidad</h5>
+                </div>
+                <div
+                  id="descripcionCurso"
+                  class="card-text text-white text-center p-3"
+                >
+                  <p>
+                    Se enseñan herramientas y técnicas específicas utilizadas
+                    para identificar y resolver problemas de calidad, como el
+                    análisis de causa raíz, las técnicas estadísticas, el mapeo
+                    de procesos, el control de calidad estadístico, el diseño de
+                    experimentos y la gestión de proyectos de mejora de la
+                    calidad.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-12 position-relative mb-5">
+          <a href="../CategoriaEspecífica/SegInd.html">
+            <div class="card">
+              <div class="card-body">
+                <div id="curso" class="card-title text-white text-center p-4">
+                  <h5>Seguridad Industrial y medio ambiente</h5>
+                </div>
+                <div
+                  id="descripcionCurso"
+                  class="card-text text-white text-center p-3"
+                >
+                  <p>
+                    Proporciona los conocimientos y habilidades necesarios para
+                    identificar, evaluar y controlar los riesgos laborales, así
+                    como para aplicar prácticas sostenibles y responsables desde
+                    el punto de vista ambiental en el entorno laboral. Estos
+                    cursos son relevantes para profesionales que desempeñen
+                    roles relacionados con la seguridad laboral, la prevención
+                    de riesgos y la gestión ambiental en empresas de diversos
+                    sectores.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-12 position-relative mb-5">
+          <a href="../CategoriaEspecífica/Mantenimiento.html">
+            <div class="card">
+              <div class="card-body">
+                <div id="curso" class="card-title text-white text-center p-4">
+                  <h5>Mantenimiento</h5>
+                </div>
+                <div
+                  id="descripcionCurso"
+                  class="card-text text-white text-center p-3"
+                >
+                  <p>
+                    Brinda a los participantes los conocimientos y habilidades
+                    necesarios para llevar a cabo labores de mantenimiento
+                    eficientes y efectivas, contribuyendo así a la
+                    disponibilidad, confiabilidad y prolongación de la vida útil
+                    de equipos y sistemas en diversos entornos profesionales.
+                    Estos cursos son relevantes para técnicos, ingenieros y
+                    profesionales encargados del mantenimiento en empresas de
+                    distintos sectores.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-12 position-relative mb-5">
+          <a href="../CategoriaEspecífica/Offi.html">
+            <div class="card">
+              <div class="card-body">
+                <div id="curso" class="card-title text-white text-center p-4">
+                  <h5>Offiemática</h5>
+                </div>
+                <div
+                  id="descripcionCurso"
+                  class="card-text text-white text-center p-3"
+                >
+                  <p>
+                    Nuestro curso de offimática tiene como objetivo proporcionar
+                    a los participantes las habilidades necesarias para utilizar
+                    de manera efectiva las aplicaciones de software de oficina
+                    más comunes, mejorando así su eficiencia y productividad en
+                    un entorno laboral.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row my-5">
+        <div class="col-sm-7 col-12 position-relative">
+          <p class="position-absolute top-50 start-50 translate-middle">
+            Nuestro catálogo básico de cursos, de acuerdo a las diferentes áreas
+            del conocimiento obtenido a través de los procesos de capacitación y
+            desarrollo personal que ofrecemos, así mismo diseñamos, en conjunto
+            con nuestros expertos, programas enfocados 100% a las necesidades de
+            su Empresa.
+          </p>
+        </div>
+        <div class="col-sm-5 col-12">
+          <img src="./img/curso.png" width="50%" alt="" />
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <footer>©Todos los derechos reservados a SIF consultores</footer>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

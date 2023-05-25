@@ -1,0 +1,28 @@
+{
+  "name": "pia-labproweb-frontend",
+  "version": "1.0.0",
+  "description": "Repositorio para el frontend del proyecto final de Laboratorio de programación web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/momk2709/PIA-LABPROWEB-Frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/momk2709/PIA-LABPROWEB-Frontend/issues"
+  },
+  "homepage": "https://github.com/momk2709/PIA-LABPROWEB-Frontend#readme",
+  "devDependencies": {
+    "vite": "^4.3.8"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "js-cookie": "^3.0.5"
+  }
+}
