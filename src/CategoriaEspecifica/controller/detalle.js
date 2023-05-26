@@ -3,6 +3,7 @@ import {
   ComponenteCursoLink,
 } from "./detalle.components";
 import { getCursosByGenre } from "./detalle.api";
+import { format } from "date-fns";
 
 const cursosContainer = document.getElementById("lstCursos");
 const cursoInformation = document.getElementById("information-container");
@@ -20,11 +21,19 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     const { categoria, cursos } = response.data;
 
+    const cursoInfo = new ComponenteCursoInformacion(
+      categoria.nombre,
+      categoria.descripcion,
+      categoria.imagenUrl
+    );
+
+    cursoInfo.insertarEnContenedor("information-container");
+
     cursos.forEach((curso) => {
       let cursoLink = new ComponenteCursoLink(
         curso.nombre,
-        curso.fechaInicio,
-        curso.fechaFin,
+        format(new Date(curso.fechaInicio), "MMMM d, yyyy"),
+        format(new Date(curso.fechaFin), "MMMM d, yyyy"),
         `../CategoriaEspecifica/Cursos.html?genero=${categoria.id}`
       );
 
