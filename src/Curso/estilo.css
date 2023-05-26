@@ -1,0 +1,30 @@
+footer {
+    background-color: black;
+    color: gray;
+    font-size: 12px;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 15px;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descripcion {
+    width: 800px;
+    background-color: #E6EDF1;
+    border-radius: 15px;
+}
