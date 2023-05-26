@@ -4,9 +4,111 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso</title>
+    <title>Admin,Conta y Fin</title>
+    <link rel="stylesheet" href="estilo.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    HALLo
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand mx-5" href="../Principal/Principal.html">
+            <img src="img/sif2.png" alt="" width="70" height="70" />
+          </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 fs-3 p-1">
+              <li class="nav-item mx-4">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../AboutUs/AboutUs.html"
+                  >Quiénes Somos</a
+                >
+              </li>
+              <li class="nav-item mx-4">
+                <a
+                  class="nav-link active"
+                  href="../CategoriasCursos/categoriasCursos.html"
+                  >Cursos</a
+                >
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="../Informes/Informes.html"
+                  >Informes</a
+                >
+              </li>
+            </ul>
+            <a
+              class="btn btn-outline-primary"
+              href="../RegistroUsuario/Registro.html"
+              role="button"
+              >Regístrate Aquí</a
+            >
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+              class="btn btn-primary"
+              href="../LoginUsuario/Login.html"
+              role="button"
+              >Iniciar Sesión</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <div id="information-container">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div class="p-3">
+              <h1>Administración, contabilidad y finanzas</h1>
+              <h1 id="categoria" class="text-decoration-underline"></h1>
+              <p id="descripcionCurso" class="mt-4 fs-5">
+                Proporciona a los participantes los conocimientos y habilidades
+                necesarios para gestionar eficazmente una organización,
+                interpretar información financiera, tomar decisiones basadas en
+                datos y desarrollar estrategias financieras sólidas. Estos
+                cursos son relevantes tanto para aquellos que deseen trabajar en
+                áreas administrativas y financieras, como para emprendedores y
+                empresarios que buscan mejorar la gestión de sus negocios.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12">
+            <img
+              src="https://micarrerauniversitaria.com/wp-content/uploads/2018/02/0004_shutterstock_164852162.jpg"
+              width="80%"
+              alt="Imagen de la categoria"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="lstCursos" class="row mt-5"></div>
+
+      <div class="row mt-5">
+        <footer>©Todos los derechos reservados a SIF consultores</footer>
+      </div>
+    </div>
+
+    <script type="module" src="./controller/detalle.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

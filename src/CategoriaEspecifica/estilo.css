@@ -32,7 +32,7 @@ a:active {
     text-decoration: none;
 }
 
-#cursoLink {
+.cursoLink {
     display: flex;
     justify-content: center;
     align-items: center;
