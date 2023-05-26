@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nosotros</title>
+    <link rel="stylesheet" href="../estilo.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand mx-5" href="../index.html">
+                        <img src="../img/sif2.png" alt="" width="70" height="70" />
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0 fs-3 p-1">
+                            <li class="nav-item mx-4">
+                                <a class="nav-link active" aria-current="page" href="../AboutUs/AboutUs.html">Quiénes
+                                    Somos</a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link active" href="../CategoriasCursos/categoriasCursos.html">Cursos</a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link active" href="../Informes/Informes.html">Informes</a>
+                            </li>
+                        </ul>
+                        <a class="btn btn-outline-primary" href="../RegistroUsuario/Registro.html"
+                            role="button">Regístrate
+                            Aquí</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-primary" href="../LoginUsuario/Login.html" role="button">Iniciar Sesión</a>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div id="instructorSection" class="mt-5">
+                <div id="instructor-Cards" class="row justify-content-center">
+                    <!-- INICIO DE CARD de Instructor -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/instructor.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">AMLO</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
+                    <!-- FIN DE CARD de Instructor -->
+                </div>
+            </div>
+
+            <h1>Calificar instructores</h1>
+            <form id="crearForm">
+                <div class="mb-3">
+                    <label for="exampleDataList" class="form-label">Instructor</label>
+                    <input id="lstInstructores" class="form-control" list="instructores"
+                        placeholder="Type to search...">
+                    <datalist id="instructores">
+                        <option value=""></option>
+                    </datalist>
+                </div>
+                <div class="mb-3">
+                    <label for="calificacion" class="form-label">Calificación:</label>
+                    <select class="form-select" id="calificacion" required>
+                        <option value="" selected disabled>Selecciona una calificación</option>
+                        <option value="1">⭐️</option>
+                        <option value="2">⭐️⭐️</option>
+                        <option value="3">⭐️⭐️⭐️</option>
+                        <option value="4">⭐️⭐️⭐️⭐️</option>
+                        <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar reseña</button>
+            </form>
+
+            <div class="row mt-5">
+                <footer>
+                    ©Todos los derechos reservados a SIF consultores
+
+                </footer>
+            </div>
+        </div>
+
+        <!--SCRIPTS DE BS-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
