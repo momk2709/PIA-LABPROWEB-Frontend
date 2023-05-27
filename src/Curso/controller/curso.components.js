@@ -59,12 +59,13 @@ export class DescripcionComponente extends ComponenteBase {
 }
 
 export class DatosInstructor extends ComponenteBase {
-  constructor(nombre, foto, descripcion, enlace) {
+  constructor(nombre, foto, descripcion, enlace, email) {
     super();
     this.nombre = nombre;
     this.foto = foto;
     this.descripcion = descripcion;
     this.enlace = enlace;
+    this.email = email;
   }
 
   render() {
@@ -75,6 +76,7 @@ export class DatosInstructor extends ComponenteBase {
           </div>
           <div class="col-lg-5">
             <a href="${this.enlace}"><h4>${this.nombre}</h4></a>
+            <em>${this.email}</em>
             <p>${this.descripcion}</p>
           </div>
         </div>
