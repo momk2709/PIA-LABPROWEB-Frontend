@@ -1,5 +1,4 @@
 import axios from "axios";
-import Cookies from "js-cookie";
 const BASE_URL = "http://localhost:3000/api";
 
 export const cursosApi = axios.create({
@@ -10,7 +9,7 @@ export const cursosApi = axios.create({
 });
 
 cursosApi.interceptors.request.use((config) => {
-  const token = Cookies.get("token");
+  const token = window.localStorage.getItem("token");
 
   if (token) {
     config.headers["Authorization"] = `Bearer ${token}`;
