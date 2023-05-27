@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         instructor.nombre,
         instructor.imagenUrl,
         instructor.descripcion,
-        instructor.id,
+        "../Curso/instructor/instructor.html?instructorId=" + instructor.id,
         instructor.email
       );
 
