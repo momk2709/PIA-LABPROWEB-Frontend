@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         curso.nombre,
         format(new Date(curso.fechaInicio), "MMMM d, yyyy"),
         format(new Date(curso.fechaFin), "MMMM d, yyyy"),
-        `../CategoriaEspecifica/Cursos.html?genero=${categoria.id}`
+        `../Curso/curso.html?cursoId=${curso.id}`
       );
 
       cursoLink.insertarEnContenedor("lstCursos");
