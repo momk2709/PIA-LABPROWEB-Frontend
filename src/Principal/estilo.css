@@ -11,9 +11,6 @@ height:100% ;
 object-fit: cover; 
 }
 
-.sec-p{
-    height: 300px;
-}
 
 .verde-c{
     background-color: #9AA653;
@@ -42,9 +39,6 @@ footer {
   text-align: center;
 }  
 
-.icono-space{
-  display: flex;
-}
 
 .icono-margin{
   margin-right: 15px;
