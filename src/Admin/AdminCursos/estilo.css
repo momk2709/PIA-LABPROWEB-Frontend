@@ -8,6 +8,7 @@
     float: left;
     width: 300px;
     display: block;
+    height: 1070px;
 }
 
 #derecha {
@@ -26,16 +27,47 @@ li {
     padding: 20px;
 }
 
-#content {
+#content{
     position: absolute;
     width: 600px;
     left: 50px;
-    top:70px;
 }
 
-.fondoTitulo {
+#lstCursos li{
+    font-size: 15px;
+}
+
+
+.tblCur{
+    height: 150px;
+}
+
+.tblCur option{
+   font-size: 24;
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+.fondoTitulo{
     background-color: #042955;
     width: 600px;
     height: 30px;
     border-radius: 3px;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    font-size: 10px;
+}
+
+thead {
+    text-align: center;
 }
