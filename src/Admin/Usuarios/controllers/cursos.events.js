@@ -12,6 +12,7 @@ import {
 // Necesitamos los modales, RECUERDEN SUS IDS
 const editarCursoModal = document.getElementById("editar-curso-modal");
 const crearCursoModal = document.getElementById("crear-modal");
+const asignarCursoModal = document.getElementById("asignar-curso-modal");
 
 //Estas son librerias que nos facilitan el hacer las tablas y alertas
 
@@ -65,6 +66,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         <button class="btn btn-danger btn-sm" data-id="${row[0]}">
             ELIMINAR
         </button>
+        <button class="btn btn-success btn-sm" data-id="${row[0]}">
+        ASIGNAR
+      </button>
       `;
         },
       },
@@ -168,6 +172,10 @@ document.addEventListener("DOMContentLoaded", async () => {
           }
         }
       }
+    }
+
+    if (e.target.classList.contains("btn-success")) {
+      $("#asignar-curso-modal").modal("show");
     }
   });
 });
