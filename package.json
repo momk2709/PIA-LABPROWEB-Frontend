@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/momk2709/PIA-LABPROWEB-Frontend#readme",
   "devDependencies": {
-    "vite": "^4.3.8"
+    "vite": "^4.3.9"
   },
   "dependencies": {
     "axios": "^1.4.0",
