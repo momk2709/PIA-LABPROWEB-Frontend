@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Cursos</title>
+    <title>Admin Instructor</title>
 
     <link rel="stylesheet" href="estilo.css" />
 
@@ -69,30 +69,32 @@
 
     <div id="derecha">
       <div id="content">
-        <h1 class="display-4 text-center">Cursos</h1>
+        <h1 class="display-4 text-center">Instructor</h1>
 
-        <!-- ========== MODAL DE CREAR CURSO ========== -->
+        <!-- ========== MODAL DE CREAR INSTRUCTOR ========== -->
         <button
           type="button"
           class="btn btn-primary"
           data-bs-toggle="modal"
-          data-bs-target="#modal-crear"
+          data-bs-target="#crear-instructor-modal"
         >
-          Crear Curso
+          Crear Instructor
         </button>
 
         <!-- Modal -->
         <div
           class="modal fade"
-          id="modal-crear"
+          id="crear-instructor-modal"
           tabindex="-1"
-          aria-labelledby="modal-crear-label"
+          aria-labelledby="crear-instructor-modal-label"
           aria-hidden="true"
         >
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="modal-crear-label">Crear Curso</h5>
+                <h5 class="modal-title" id="crear-instructor-modal-label">
+                  Crear Curso
+                </h5>
                 <button
                   type="button"
                   class="btn-close"
@@ -101,56 +103,65 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <form id="crear-curso-form">
+                <form id="crear-instructor-form">
                   <div class="mb-3">
-                    <label for="crear-nombre" class="form-label">Nombre</label>
+                    <label for="crear-instructor-nombre" class="form-label"
+                      >Nombre</label
+                    >
                     <input
                       type="text"
                       class="form-control"
-                      id="crear-nombre"
+                      id="crear-instructor-nombre"
                       required
+                      maxlength="255"
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="crear-descripcion" class="form-label"
+                    <label for="crear-instructor-email" class="form-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="crear-instructor-email"
+                      required
+                      maxlength="255"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="crear-instructor-descripcion" class="form-label"
                       >Descripción</label
                     >
                     <textarea
                       class="form-control"
-                      id="crear-descripcion"
+                      id="crear-instructor-descripcion"
                       required
+                      maxlength="255"
+                      rows="5"
                     ></textarea>
                   </div>
                   <div class="mb-3">
-                    <label for="crear-precio" class="form-label">Precio</label>
+                    <label for="crear-instructor-telefono" class="form-label"
+                      >Telefono</label
+                    >
                     <input
-                      min="0"
-                      type="number"
+                      type="text"
                       class="form-control"
-                      id="crear-precio"
+                      id="crear-instructor-telefono"
                       required
+                      maxlength="10"
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="crear-fecha-inicio" class="form-label"
-                      >Fecha de inicio</label
+                    <label for="crear-instructor-imagen" class="form-label"
+                      >Imagen URL</label
                     >
                     <input
-                      type="date"
+                      type="text"
                       class="form-control"
-                      id="crear-fecha-inicio"
+                      id="crear-instructor-imagen"
                       required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="crear-fecha-fin" class="form-label"
-                      >Fecha de fin</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="crear-fecha-fin"
-                      required
+                      maxlength="255"
                     />
                   </div>
                   <button type="submit" class="btn btn-primary">Guardar</button>
@@ -159,35 +170,35 @@
             </div>
           </div>
         </div>
-        <!-- ========== MODAL DE CREAR CURSO ========== -->
+        <!-- ========== MODAL DE CREAR INSTRUCTOR ========== -->
 
-        <!-- ========== TABLA DE CURSOS ========== -->
+        <!-- ========== TABLA DE INSTRUCTORES ========== -->
 
         <div>
           <table
-            id="cursos-table"
+            id="instructores-table"
             class="table table-striped table-bordered"
             style="width: 100%; white-space: nowrap; overflow-x: auto"
           >
             <thead></thead>
           </table>
         </div>
-        <!-- ========== TABLA DE CURSOS ========== -->
+        <!-- ========== TABLA DE INSTRUCTORES ========== -->
 
-        <!-- ========== MODAL EDITAR CURSO ========== -->
-
-        <!-- Modal -->
+        <!-- ========== MODAL EDITAR INSRUCTOR ========== -->
         <div
           class="modal fade"
-          id="editar-curso-modal"
+          id="editar-instructor-modal"
           tabindex="-1"
-          aria-labelledby="modalEditarLabel"
+          aria-labelledby="editar-instructor-modal-label"
           aria-hidden="true"
         >
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="modalEditarLabel">Editar Curso</h5>
+                <h5 class="modal-title" id="crear-instructor-modal-label">
+                  Editar Instructor
+                </h5>
                 <button
                   type="button"
                   class="btn-close"
@@ -196,58 +207,69 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <form id="editar-curso-form">
+                <form id="editar-instructor-form">
                   <div class="mb-3">
-                    <label for="editar-nombre" class="form-label">Nombre</label>
+                    <label for="editar-instructor-nombre" class="form-label"
+                      >Nombre</label
+                    >
                     <input
                       type="text"
                       class="form-control"
-                      id="editar-nombre"
+                      id="editar-instructor-nombre"
                       required
+                      maxlength="255"
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="editar-descripcion" class="form-label"
+                    <label for="editar-instructor-email" class="form-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="editar-instructor-email"
+                      required
+                      maxlength="255"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label
+                      for="editar-instructor-descripcion"
+                      class="form-label"
                       >Descripción</label
                     >
                     <textarea
                       class="form-control"
-                      id="editar-descripcion"
+                      id="editar-instructor-descripcion"
                       required
+                      maxlength="255"
+                      rows="5"
                     ></textarea>
                   </div>
                   <div class="mb-3">
-                    <label for="editar-precio" class="form-label">Precio</label>
+                    <label for="editar-instructor-telefono" class="form-label"
+                      >Telefono</label
+                    >
                     <input
-                      type="number"
+                      type="text"
                       class="form-control"
-                      id="editar-precio"
+                      id="editar-instructor-telefono"
                       required
+                      maxlength="10"
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="editar-fecha-inicio" class="form-label"
-                      >Fecha de inicio</label
+                    <label for="editar-instructor-imagen" class="form-label"
+                      >Imagen URL</label
                     >
                     <input
-                      type="date"
+                      type="text"
                       class="form-control"
-                      id="editar-fecha-inicio"
+                      id="editar-instructor-imagen"
                       required
+                      maxlength="255"
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="editar-fecha-fin" class="form-label"
-                      >Fecha de fin</label
-                    >
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="editar-fecha-fin"
-                      required
-                    />
-                  </div>
-
                   <button type="submit" class="btn btn-primary">Guardar</button>
                 </form>
               </div>
@@ -255,7 +277,61 @@
           </div>
         </div>
 
-        <!-- ========== MODAL EDITAR CURSO ========== -->
+        <!-- ========== MODAL EDITAR INSTRUCTOR ========== -->
+
+        <!-- ========== MODAL DE ASIGNAR CURSO ========== -->
+
+        <div
+        class="modal fade"
+        id="asignar-instructor-modal"
+        tabindex="-1"
+        aria-labelledby="asignar-instructor-modal-label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="asignar-instructor-modal-label">
+                Asignar a Curso
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="asignar-instructor-form">
+                <div class="mb-3">
+                  <label for="asignar-instructor-id" class="form-label"
+                    >Usuario ID</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="asignar-instructor-id"
+                    required
+                  />
+                  <div class="mb-3">
+                    <label for="asignar-curso-id" class="form-label"
+                      >Curso ID</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="asignar-curso-id"
+                      required
+                    />
+                <button type="submit" class="btn btn-primary">Guardar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <!-- ========== MODAL DE ASIGNAR CURSO ========== -->
       </div>
     </div>
 
@@ -270,6 +346,6 @@
     ></script>
 
     <!-- ========== SCRIPTS ========== -->
-    <script type="module" src="./controllers/cursos.events.js"></script>
+    <script type="module" src="./controllers/instructores.events.js"></script>
   </body>
 </html>
