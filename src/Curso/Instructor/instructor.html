@@ -53,33 +53,10 @@
             </nav>
 
 
-            <div id="instructorSection" class="mt-5">
-                <div id="instructor-Cards" class="row justify-content-center">
-                    <!-- INICIO DE CARD de Instructor -->
-                    <div class="card" style="width: 18rem;">
-                        <img src="../img/instructor.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">AMLO</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the
-                                card's
-                                content.</p>
-                        </div>
-                    </div>
-                    <!-- FIN DE CARD de Instructor -->
-                </div>
-            </div>
+            <div id="instructorContenedor" class="my-5 text-center"></div>
 
-            <h1>Calificar instructores</h1>
+            <h1>Califica a nuestros instructores</h1>
             <form id="crearForm">
-                <div class="mb-3">
-                    <label for="exampleDataList" class="form-label">Instructor</label>
-                    <input id="lstInstructores" class="form-control" list="instructores"
-                        placeholder="Type to search...">
-                    <datalist id="instructores">
-                        <option value=""></option>
-                    </datalist>
-                </div>
                 <div class="mb-3">
                     <label for="calificacion" class="form-label">Calificación:</label>
                     <select class="form-select" id="calificacion" required>
@@ -102,6 +79,7 @@
             </div>
         </div>
 
+        <script type="module" src="./controller/instructor.events.js"></script>
         <!--SCRIPTS DE BS-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -112,7 +90,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-
             <script type="module" src="../../utils/inSession.js"></script>
     </body>
 

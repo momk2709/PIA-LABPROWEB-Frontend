@@ -30,7 +30,7 @@ li {
     position: absolute;
     width: 600px;
     left: 50px;
-    top: 20px;
+    top:70px;
 }
 
 .fondoTitulo {
@@ -40,26 +40,17 @@ li {
     border-radius: 3px;
 }
 
-.cont-left{
-    float: left;
-    width: 150px;
+table {
+    width: 60%;
+    border-collapse: collapse;
 }
 
-.cont-right {
-    float: right;
-    width: 450px;
-}
-
-.name{
-    float: left;
-}
-.email{
-    float: right;
-    margin-top: 110px;
-}
-
-.usuarioCursos li{
-    font-size: 20px;
+th,
+td {
     padding: 10px;
-    list-style: none;
+    font-size: 18px;
+}
+
+thead {
+   text-align: center;
 }
