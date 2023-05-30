@@ -70,73 +70,90 @@
       <div id="content">
         <h1 class="display-4 text-center">USUARIOS</h1>
 
-        <!-- ========== MODAL DE CREAR CURSO ========== -->
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#modal-crear"
-        >
-          Crear Usuario
-        </button>
 
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="modal-crear"
-          tabindex="-1"
-          aria-labelledby="modal-crear-label"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modal-crear-label">Crear Usuario</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Cerrar"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <form id="crear-curso-form">
-                  <div class="mb-3">
-                    <label for="crear-nombre" class="form-label">Nombre</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="crear-nombre"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="crear-descripcion" class="form-label"
-                      >Email</label
-                    >
-                    <textarea
-                      class="form-control"
-                      id="crear-descripcion"
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="mb-3">
-                    <label for="crear-precio" class="form-label">Rol</label>
-                    <input
-                      min="0"
-                      type="number"
-                      class="form-control"
-                      id="crear-precio"
-                      required
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-primary">Guardar</button>
-                </form>
-              </div>
+
+
+    <!--MODAL DE CREAR USUARIO-->
+    <div class="container d-flex justify-content-center">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#crear-usuario-modal"
+      >
+        Crear usuario
+      </button>
+
+      <div
+        class="modal fade"
+        id="crear-usuario-modal"
+        tabindex="-1"
+        aria-labelledby="crear-usuario-modal-label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="crear-usuario-modal-label">
+                Crear usuario
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form id="crear-usuario-form">
+                <div class="mb-3">
+                  <label for="crear-usuario-nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="crear-usuario-nombre"
+                    placeholder="Ingrese el nombre"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="crear-usuario-email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="crear-usuario-email"
+                    placeholder="Ingrese el email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="crear-usuario-password" class="form-label"
+                    >Contraseña</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="crear-usuario-password"
+                    placeholder="Ingrese la contraseña"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="crear-usuario-rol" class="form-label">Rol</label>
+                  <select class="form-select" id="crear-usuario-rol" required>
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="USER">USER</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+              </form>
             </div>
           </div>
         </div>
-        <!-- ========== MODAL DE CREAR CURSO ========== -->
+      </div>
+    </div>
+
+    <!-- ========== Modal de Crear Usuarios ========== -->
 
         <!-- ========== TABLA DE CURSOS ========== -->
 
@@ -151,66 +168,90 @@
         </div>
         <!-- ========== TABLA DE CURSOS ========== -->
 
-        <!-- ========== MODAL EDITAR CURSO ========== -->
+<!-- ========== Modal de Editar Usuarios ========== -->
 
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="editar-users-modal"
-          tabindex="-1"
-          aria-labelledby="modalEditarLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalEditarLabel">Editar Usuario</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Cerrar"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <form id="editar-curso-form">
-                  <div class="mb-3">
-                    <label for="editar-nombre" class="form-label">Nombre</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="editar-nombre"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="editar-descripcion" class="form-label"
-                      >Email</label
-                    >
-                    <textarea
-                      class="form-control"
-                      id="editar-descripcion"
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="mb-3">
-                    <label for="editar-precio" class="form-label">Rol</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="editar-precio"
-                      required
-                    />
-                  </div>
-
-                  <button type="submit" class="btn btn-primary">Guardar</button>
-                </form>
-              </div>
-            </div>
-          </div>
+<div
+class="modal fade"
+id="editar-usuario-modal"
+tabindex="-1"
+aria-labelledby="editar-usuario-modal-label"
+aria-hidden="true"
+>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="editar-usuario-modal-label">
+        Editar usuario
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form id="editar-usuario-form">
+        <div class="mb-3">
+          <label for="editar-usuario-nombre" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="editar-usuario-nombre"
+            placeholder="Ingrese el nombre"
+            required
+          />
         </div>
+        <div class="mb-3">
+          <label for="editar-usuario-email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="editar-usuario-email"
+            placeholder="Ingrese el email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="editar-usuario-password" class="form-label"
+            >Contraseña</label
+          >
+          <div class="form-check form-switch mb-2">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="password-switch"
+            />
+            <label class="form-check-label" for="password-switch"
+              >Habilitar contraseña</label
+            >
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            id="editar-usuario-password"
+            placeholder="Ingrese la contraseña"
+            disabled
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="editar-usuario-rol" class="form-label">Rol</label>
+          <select class="form-select" id="editar-usuario-rol" required>
+            <option value="ADMIN">ADMIN</option>
+            <option value="USER">USER</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Guardar cambios
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
 
-        <!-- ========== MODAL EDITAR CURSO ========== -->
+<!-- ========== Modal de Editar Usuarios ========== -->
       </div>
 
       <!-- ========== MODAL DE ASIGNAR USUARIO ========== -->
@@ -218,15 +259,15 @@
       <!-- Modal -->
       <div
         class="modal fade"
-        id="asignar-users-modal"
+        id="asignar-usuario-modal"
         tabindex="-1"
-        aria-labelledby="modalAsignarLabel"
+        aria-labelledby="modal-asignar-usuario-label"
         aria-hidden="true"
       >
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="modalAsignarLabel">
+              <h5 class="modal-title" id="modal-asignar-usuario-label">
                 Asignar a Usuario
               </h5>
               <button
@@ -237,7 +278,7 @@
               ></button>
             </div>
             <div class="modal-body">
-              <form id="asignar-users-form">
+              <form id="asignar-usuario-form">
                 <div class="mb-3">
                   <label for="asignar-usuario-id" class="form-label"
                     >Usuario ID</label
@@ -248,6 +289,16 @@
                     id="asignar-usuario-id"
                     required
                   />
+                  <div class="mb-3">
+                    <label for="asignar-curso-id" class="form-label"
+                      >Curso ID</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="asignar-curso-id"
+                      required
+                    />
                 <button type="submit" class="btn btn-primary">Guardar</button>
               </form>
             </div>
@@ -256,7 +307,9 @@
       </div>
 
       <!-- ========== MODAL DE ASIGNAR USUARIO ========== -->
+
     </div>
+
 
     <!-- ========== SCRIPTS ========== -->
 
