@@ -11,6 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
@@ -42,11 +43,60 @@
               </svg>
             </div>
           </ul>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand mx-5" href="#">
+            <img
+              src="../Principal/img/sif2.png"
+              alt=""
+              width="70"
+              height="70"
+            />
+          </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 fs-3 p-1">
+              <li class="nav-item mx-4">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../AboutUs/AboutUs.html"
+                  >Quiénes Somos</a
+                >
+              </li>
+              <li class="nav-item mx-4">
+                <a
+                  class="nav-link active"
+                  href="../CategoriasCursos/categoriasCursos.html"
+                  >Cursos</a
+                >
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link active" href="#">Menu</a>
+              </li>
+              <button id="logout-button" type="submit" class="btn btn-dark">
+                Cerrar sesión
+              </button>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="corner-icon bi bi-person-circle"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                  />
+                </svg>
+              </div>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <br />
-    <h1 class="display-5">Bienvenido, Nombre Usuario</h1>
+      </nav>
+      <br />
+      <h1 class="display-5">Bienvenido</h1>
     <br />
     <h1 class="text-center">Cursos Tomados</h1>
     <div id="cursosContenedor" class="row mt-4">
@@ -73,4 +123,7 @@
   <script type="module" src="./admin.js"></script>
 </body>
 
+
 </html>
+
+  
