@@ -3,24 +3,25 @@ import {
   createUsers,
   deleteUser,
   updateUsers,
+  asignarUsuario,
 } from "./usuarios.api";
-const editarCursoModal = document.getElementById("editar-user-modal");
-const crearCursoModal = document.getElementById("crear-modal");
+
 import Swal from "sweetalert2";
 import DataTable from "datatables.net-dt";
+
+const editarUsuarioModal = document.getElementById("editar-usuario-modal");
+const asignarUsuarioModal = document.getElementById("asignar-usuario-modal");
+const passwordSwitch = document.getElementById("password-switch");
+const editarPassword = document.getElementById("editar-usuario-password");
+
 document.addEventListener("DOMContentLoaded", async () => {
   const response = await getALLUsers();
-  const user = response.users.map((users) => {
-    return [
-      users.id,
-      users.nombre,
-      users.email,
-      users.rol,
-    ];
+  const users = response.users.map((user) => {
+    return [user.id, user.nombre, user.email, user.rol];
   });
   const usersTable = document.getElementById("user-table");
   const dataTable = new DataTable(usersTable, {
-    data: user,
+    data: users,
     columns: [
       { title: "ID" },
       { title: "Nombre" },
@@ -30,9 +31,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         title: "Acciones",
         render: function (data, type, row) {
           return `
-        <button class="btn btn-success btn-sm" data-id="${row[0]}">
-            CREAR
-        </button>
         <button class="btn btn-warning btn-sm" data-id="${row[0]}">
             EDITAR
         </button>
@@ -52,54 +50,52 @@ document.addEventListener("DOMContentLoaded", async () => {
     },
   });
   usersTable.addEventListener("click", async (e) => {
-    if (e.target.classList.contains("btn-primary")) {
-
+    if (e.target.classList.contains("btn-warning")) {
       const id = e.target.getAttribute("data-id");
-      const user = response.users.find((user) => user.id == id);
-      const nombre = document.getElementById("editar-nombre");
-      const email = document.getElementById("editar-email");
-      const rol = document.getElementById("editar-rol");
 
-      editarUserModal.dataset.id = id;
+      const user = response.users.find((user) => user.id === Number(id));
+
+      const nombre = document.getElementById("editar-usuario-nombre");
+      const email = document.getElementById("editar-usuario-email");
+      const rol = document.getElementById("editar-usuario-rol");
+
       nombre.value = user.nombre;
       email.value = user.email;
-      rol.value = rol.nombre;
-      $("#editar-user-modal").modal("show");
+      rol.value = user.rol;
 
+      editarUsuarioModal.dataset.id = id;
+      editarUsuarioModal.dataset.nombre = user.nombre;
+      editarUsuarioModal.dataset.email = user.email;
+      editarUsuarioModal.dataset.rol = user.rol;
+
+      $("#editar-usuario-modal").modal("show");
     }
+
     if (e.target.classList.contains("btn-danger")) {
       const id = e.target.getAttribute("data-id");
 
-      const result = await Swal.fire({
+      Swal.fire({
         title: "¿Estas seguro?",
-        text: "¡No podras revertir esto!",
+        text: "¡No podrás revertir esto!",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonText: "¡Si, eliminar!",
-        cancelButtonText: "¡No, cancelar!",
-        reverseButtons: true,
-      });
-
-      if (result.isConfirmed) {
-        // Aqui se manda el id del curso que se va a eliminar al backend
-        // Aqui se puede usar la funcion que ya creamos para eliminar el curso
-        // O pueden crear una nueva, como gusten
-
-        // Aqui se muestra una alerta de que el curso se elimino correctamente
+        confirmButtonText: "Si, bórralo",
+        cancelButtonText: "No, cancelar",
+      }).then(async (result) => {
         try {
-          await deleteUser(id);
+          if (result.isConfirmed) {
+            await deleteUser(id);
 
-          Swal.fire(
-            "¡Eliminado!",
-            "El usuario se elimino correctamente.",
-            "success"
-          );
-
-          // Aqui se actualiza la tabla para que ya no aparezca el curso eliminado
-
-          dataTable.row(e.target.parentElement.parentElement).remove().draw();
+            Swal.fire({
+              title: "Usuario eliminado",
+              text: `El usuario ${id} ha sido eliminado`,
+              icon: "success",
+              confirmButtonText: "Aceptar",
+            }).then(() => {
+              window.location.reload();
+            });
+          }
         } catch (error) {
-          // ESTE MENSAJE SE UTILIZA EN TODOS LOS CATCH DE ESTE ARCHIVO
           if (error.name === "ValidationError") {
             const errorMessages = error.data.map((error) => {
               return `<li>${error.msg}</li>`;
@@ -113,37 +109,44 @@ document.addEventListener("DOMContentLoaded", async () => {
             Swal.fire("Error", error.message, "error");
           }
         }
-      }
+      });
+    }
+
+    if (e.target.classList.contains("btn-primary")) {
+      const id = e.target.getAttribute("data-id");
+
+      const asignarUsuarioId = document.getElementById("asignar-usuario-id");
+
+      asignarUsuarioId.value = id;
+
+      $("#asignar-usuario-modal").modal("show");
     }
   });
 });
 
+const crearUsuarioForm = document.getElementById("crear-usuario-form");
+const editarUsuarioForm = document.getElementById("editar-usuario-form");
+const asignarUsuarioForm = document.getElementById("asignar-usuario-form");
 
-// EDITAR
-const editarUserForm = document.getElementById("editar-user-form");
-
-// CREAR
-const crearUserForm = document.getElementById("crear-user-form");
-editarUserForm.addEventListener("submit", async (e) => {
+crearUsuarioForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const id = editarUserModal.dataset.id;
-  const nombre = editarUserForm["editar-nombre"].value;
-  const email = editarUserForm["editar-email"].value;
-  const rol = editarUserForm["editar-rol"].value;
+
+  const nombre = document.getElementById("crear-usuario-nombre").value;
+  const email = document.getElementById("crear-usuario-email").value;
+  const password = document.getElementById("crear-usuario-password").value;
+  const rol = document.getElementById("crear-usuario-rol").value;
 
   try {
-    const response = await updateUsers({
-      id,
-      nombre,
-      email,
-      rol,
-    });
-    Swal.fire(
-      "¡Actualizado!",
-      `El usuario ${response.users.id} se actualizó correctamente`,
-      "success"
-    ).then(() => {
-      $("#editar-users-modal").modal("hide");
+    const response = await createUsers({ nombre, email, password, rol });
+
+    $("#crear-usuario-modal").modal("hide");
+
+    Swal.fire({
+      title: "Usuario creado",
+      text: `El usuario ${response.user.id} ha sido creado`,
+      icon: "success",
+      confirmButtonText: "Aceptar",
+    }).then(() => {
       window.location.reload();
     });
   } catch (error) {
@@ -162,26 +165,32 @@ editarUserForm.addEventListener("submit", async (e) => {
   }
 });
 
-crearUserForm.addEventListener("submit", async (e) => {
+editarUsuarioForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const nombre = crearUserForm["crear-nombre"].value;
-  const email = crearUserForm["crear-email"].value;
-  const rol = crearUserForm["crear-rol"].value;
+
+  let usuario;
+
+  const id = editarUsuarioModal.dataset.id;
+  const nombre = document.getElementById("editar-usuario-nombre").value;
+  const email = document.getElementById("editar-usuario-email").value;
+  const password = document.getElementById("editar-usuario-password").value;
+  const rol = document.getElementById("editar-usuario-rol").value;
+
+  if (passwordSwitch.checked) {
+    usuario = { id, nombre, email, password, rol };
+  } else {
+    usuario = { id, nombre, email, rol };
+  }
 
   try {
-    const response = await createUsers({
-      nombre,
-      email,
-      rol,
-    });
-
-    Swal.fire(
-      "¡Creado!",
-      `El usuario ${response.users.id} se creó correctamente`,
-      "success"
-    ).then(() => {
-      $("#crear-user-modal").modal("hide");
-      $("#crear-user-modal").trigger("reset");
+    const response = await updateUsers(usuario);
+    $("#editar-usuario-modal").modal("hide");
+    Swal.fire({
+      title: "Usuario actualizado",
+      text: `El usuario ${response.user.id} ha sido actualizado`,
+      icon: "success",
+    }).then(() => {
+      editarPassword.value = "";
       window.location.reload();
     });
   } catch (error) {
@@ -200,4 +209,49 @@ crearUserForm.addEventListener("submit", async (e) => {
   }
 });
 
+passwordSwitch.addEventListener("change", (e) => {
+  if (passwordSwitch.checked) {
+    editarPassword.disabled = false;
+  } else {
+    editarPassword.disabled = true;
+  }
+});
 
+asignarUsuarioForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const usuarioId = Number(document.getElementById("asignar-usuario-id").value);
+  const cursoId = Number(document.getElementById("asignar-curso-id").value);
+
+  try {
+    const response = await asignarUsuario({
+      usuario_id: usuarioId,
+      curso_id: cursoId,
+    });
+
+    $("#asignar-usuario-modal").modal("hide");
+
+    Swal.fire({
+      title: "Usuario asignado",
+      text: `El usuario ${response.cursoUser.usuario_id} ha sido asignado al curso ${response.cursoUser.curso_id}`,
+      icon: "success",
+      confirmButtonText: "Aceptar",
+    }).then(() => {
+      document.getElementById("asignar-curso-id").value = "";
+      window.location.reload();
+    });
+  } catch (error) {
+    if (error.name === "ValidationError") {
+      const errorMessages = error.data.map((error) => {
+        return `<li>${error.msg}</li>`;
+      });
+      Swal.fire({
+        title: "Validation Error",
+        html: `<ul>${errorMessages.join("")}</ul>`,
+        icon: "error",
+      });
+    } else {
+      Swal.fire("Error", error.message, "error");
+    }
+  }
+});

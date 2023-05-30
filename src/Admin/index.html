@@ -30,13 +30,19 @@
 
           <h5 class="my-3 text-white">Administrador</h5>
 
-          <button type="submit" class="btn btn-primary">Cerrar sesión</button>
+          <button id="logout-button" type="submit" class="btn btn-primary">
+            Cerrar sesión
+          </button>
 
           <img src="./Inicio/img/linea.png" class="mt-3" width="80%" alt="" />
 
           <ul class="list mb-5">
             <li>
-              <a class="text-decoration-none text-white" href="">Usuarios</a>
+              <a
+                class="text-decoration-none text-white"
+                href="./Usuarios/index.html"
+                >Usuarios</a
+              >
             </li>
             <li>
               <a
@@ -46,7 +52,7 @@
               >
             </li>
             <li>
-              <a class="text-decoration-none text-white" href="">Facturas</a>
+              <a class="text-decoration-none text-white" href="./">Facturas</a>
             </li>
           </ul>
         </div>
@@ -67,5 +73,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+    <script type="module" src="./logout.js"></script>
   </body>
 </html>

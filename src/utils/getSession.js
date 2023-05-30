@@ -29,7 +29,7 @@ export async function getSession() {
 export async function isAdmin() {
   const session = await getSession();
 
-  if (session.role === "ADMIN") {
+  if (session.rol === "ADMIN") {
     return true;
   }
 
