@@ -141,29 +141,54 @@
         </div>
 
         <!-- ========== MODAL DE ASIGNAR CATEGORIA ========== -->
-
-        <!-- Modal -->
-        <div class="modal fade" id="asignar-categoria-modal" tabindex="-1" aria-labelledby="modalAsignarLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalAsignarLabel">
-                            Asignar a Curso
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="asignar-categorias-form">
-                            <div class="mb-3">
-                                <label for="asignar-categoria-id" class="form-label">Curso ID</label>
-                                <input type="number" class="form-control" id="asignar-categoria-id" required />
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                        </form>
-                    </div>
-                </div>
+        <div
+        class="modal fade"
+        id="asignar-categoria-modal"
+        tabindex="-1"
+        aria-labelledby="modal-asignar-categoria-label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-asignar-categoria-label">
+                Asignar a Curso
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar"
+              ></button>
             </div>
+            <div class="modal-body">
+              <form id="asignar-categoria-form">
+                <div class="mb-3">
+                  <label for="asignar-categoria-id" class="form-label"
+                    >Categoria ID</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="asignar-categoria-id"
+                    required
+                  />
+                  <div class="mb-3">
+                    <label for="asignar-curso-id" class="form-label"
+                      >Curso ID</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="asignar-curso-id"
+                      required
+                    />
+                <button type="submit" class="btn btn-primary">Guardar</button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
 
         <!-- ========== MODAL DE ASIGNAR CATEGORIA ========== -->
     </div>
